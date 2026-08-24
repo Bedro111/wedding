@@ -1,0 +1,194 @@
+<div class="card">
+
+
+    <!-- شاشة الاسم -->
+
+    <div id="nameScreen">
+
+        <div class="ornament">
+            ✦
+        </div>
+
+        <div class="small-title">
+            SPECIAL INVITATION
+        </div>
+
+        <h1>
+            دعوة خاصة
+        </h1>
+
+        <p class="subtitle">
+
+            عندي دعوة ليك يا خويا ❤️
+            <br>
+            اكتب اسمك عشان تفتح دعوتك
+
+        </p>
+
+
+        <input
+            type="text"
+            id="nameInput"
+            placeholder="اكتب اسمك هنا..."
+            autocomplete="off"
+        >
+
+
+        <button onclick="showInvitation()">
+
+            افتح دعوتك ✨
+
+        </button>
+
+    </div>
+
+
+
+    <!-- الدعوة -->
+
+    <div id="message">
+
+
+        <div class="ornament">
+            ✦
+        </div>
+
+
+        <div class="small-title">
+            YOU ARE INVITED
+        </div>
+
+
+        <div class="welcome">
+
+            أخويا
+            <span class="name" id="userName"></span>
+            ❤️
+
+        </div>
+
+
+        <div class="divider">
+            <span>❖</span>
+        </div>
+
+
+        <div class="message-box">
+
+            حبيت أعزمك على فرح أخويا
+
+            <br>
+
+            يوم
+            <span class="highlight">
+                الجمعة 4-9
+            </span>
+
+            إن شاء الله
+
+            <br><br>
+
+            في
+            <span class="highlight">
+                قاعة مارلي للقوات المسلحة
+            </span>
+
+            <br>
+
+            رأس البر
+
+        </div>
+
+
+        <div class="final">
+هستناك يا خويا ❤️
+
+            <br>
+
+            وفرحتي مش هتكمل غير بيك
+
+        </div>
+
+
+        <div class="location">
+
+            ✦ مستنيك تنورني في فرح أخويا ✦
+
+        </div>
+
+
+        <div class="footer">
+
+            WITH LOVE ❤️
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+    function showInvitation() {
+
+        const input =
+            document.getElementById("nameInput");
+
+        const name =
+            input.value.trim();
+
+
+        if (name === "") {
+
+            input.focus();
+
+            input.placeholder =
+                "اكتب اسمك الأول يا خويا ❤️";
+
+            return;
+
+        }
+
+
+        // إدخال الاسم في الدعوة
+
+        document.getElementById("userName")
+            .textContent = name;
+
+
+        // إخفاء شاشة الاسم
+
+        document.getElementById("nameScreen")
+            .style.display = "none";
+
+
+        // إظهار الدعوة
+
+        document.getElementById("message")
+            .style.display = "block";
+
+    }
+
+
+    // Enter يفتح الدعوة
+
+    document
+        .getElementById("nameInput")
+        .addEventListener(
+            "keypress",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    showInvitation();
+
+                }
+
+            }
+        );
+
+</script>
