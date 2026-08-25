@@ -1,16 +1,137 @@
-<style>
-    body {
-        background: #1a0710;
-        color: white;
-        text-align: center;
-        font-family: Arial;
-        padding-top: 100px;
-    }
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
-    h1 {
-        color: gold;
-    }
-</style>
-<h1>أهلاً بيك ❤️</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>دعوة فرح</title>
 
-<p>الموقع شغال تمام</p>
+    <style>
+        body {
+            background: #1b0b10;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            background: #35131d;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: #e8c45a;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 10px;
+            background: #e8c45a;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #message {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div id="start">
+
+            <h1>دعوة خاصة ❤️</h1>
+
+            <p>اكتب اسمك عشان تشوف دعوتك</p>
+
+            <input
+                id="name"
+                type="text"
+                placeholder="اكتب اسمك"
+            >
+
+            <br>
+
+            <button onclick="openInvitation()">
+                افتح الدعوة ✨
+            </button>
+
+        </div>
+
+
+        <div id="message">
+
+            <h1>
+                أخويا <span id="guest"></span> ❤️
+            </h1>
+
+            <p>
+                حبيت أعزمك على فرح أخويا
+            </p>
+
+            <p>
+                يوم <strong>الجمعة 4-9</strong>
+                إن شاء الله
+            </p>
+
+            <p>
+                في <strong>قاعة مارلي للقوات المسلحة</strong>
+                في رأس البر
+            </p>
+
+            <h2>
+                هستناك يا خويا ❤️
+            </h2>
+
+            <p>
+                وفرحتي مش هتكمل غير بيك ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function openInvitation() {
+
+            let name =
+                document.getElementById("name").value.trim();
+
+            if (name === "") {
+
+                alert("اكتب اسمك الأول ❤️");
+
+                return;
+            }
+
+            document.getElementById("guest").textContent = name;
+
+            document.getElementById("start").style.display = "none";
+
+            document.getElementById("message").style.display = "block";
+        }
+
+    </script>
+
+</body>
+
+</html>
