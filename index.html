@@ -1,13 +1,308 @@
-<div class="card">
+<title>دعوة خاصة ❤️</title>
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap');
 
-    <!-- شاشة الاسم -->
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100vh;
+        background:
+            radial-gradient(circle at top, #5c1827 0%, transparent 45%),
+            linear-gradient(135deg, #120709, #2b0d15, #100507);
+
+        color: white;
+        font-family: "Cairo", sans-serif;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 480px;
+
+        background: rgba(255, 255, 255, 0.06);
+
+        border: 1px solid rgba(212, 175, 55, 0.55);
+
+        border-radius: 25px;
+
+        padding: 35px 25px;
+
+        text-align: center;
+
+        backdrop-filter: blur(15px);
+
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.6),
+            inset 0 0 30px rgba(212, 175, 55, 0.04);
+
+        animation: appear 0.8s ease;
+    }
+
+    .gold {
+        color: #d4af37;
+    }
+
+    .symbol {
+        font-size: 45px;
+        color: #d4af37;
+        margin-bottom: 10px;
+
+        animation: pulse 2s infinite;
+    }
+
+    .small-title {
+        font-size: 12px;
+        letter-spacing: 4px;
+        color: #d4af37;
+        margin-bottom: 12px;
+    }
+
+    h1 {
+        font-family: "Amiri", serif;
+        font-size: 42px;
+        color: #f1d477;
+        margin-bottom: 10px;
+    }
+
+    .intro {
+        color: #ddd;
+        font-size: 16px;
+        line-height: 2;
+        margin-bottom: 25px;
+    }
+
+    input {
+        width: 100%;
+
+        padding: 15px;
+
+        border-radius: 12px;
+
+        border: 1px solid rgba(212, 175, 55, 0.4);
+
+        background: rgba(0, 0, 0, 0.25);
+
+        color: white;
+
+        outline: none;
+
+        text-align: center;
+
+        font-size: 16px;
+
+        font-family: "Cairo", sans-serif;
+    }
+
+    input::placeholder {
+        color: #aaa;
+    }
+
+    input:focus {
+        border-color: #d4af37;
+
+        box-shadow:
+            0 0 15px rgba(212, 175, 55, 0.2);
+    }
+
+    button {
+        width: 100%;
+
+        margin-top: 15px;
+
+        padding: 15px;
+
+        border: none;
+
+        border-radius: 12px;
+
+        background: linear-gradient(
+            135deg,
+            #b8860b,
+            #f1d477,
+            #b8860b
+        );
+
+        color: #241006;
+
+        font-size: 17px;
+
+        font-weight: bold;
+
+        font-family: "Cairo", sans-serif;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 10px 25px rgba(212, 175, 55, 0.3);
+    }
+
+    #invitation {
+        display: none;
+
+        animation: invitationAppear 1s ease;
+    }
+
+    .guest {
+        font-family: "Amiri", serif;
+
+        font-size: 28px;
+
+        margin: 20px 0;
+
+        color: white;
+    }
+
+    .guest span {
+        color: #f1d477;
+    }
+
+    .line {
+        height: 1px;
+
+        background: linear-gradient(
+            to right,
+            transparent,
+            #d4af37,
+            transparent
+        );
+
+        margin: 20px 0;
+    }
+
+    .message {
+        font-family: "Amiri", serif;
+
+        font-size: 22px;
+
+        line-height: 2;
+
+        color: #f5f5f5;
+
+        background: rgba(0, 0, 0, 0.2);
+
+        border-radius: 15px;
+
+        padding: 20px;
+    }
+
+    .highlight {
+        color: #f1d477;
+
+        font-weight: bold;
+    }
+
+    .details {
+        margin-top: 20px;
+
+        padding: 18px;
+
+        border-radius: 15px;
+
+        border: 1px solid rgba(212, 175, 55, 0.25);
+
+        background: rgba(212, 175, 55, 0.06);
+
+        line-height: 2;
+
+        color: #ddd;
+    }
+
+    .final-message {
+        font-family: "Amiri", serif;
+
+        font-size: 24px;
+
+        color: #f1d477;
+
+        margin-top: 25px;
+
+        line-height: 1.8;
+    }
+
+    .footer {
+        margin-top: 25px;
+
+        font-size: 12px;
+
+        color: #888;
+    }
+
+    @keyframes appear {
+        from {
+opacity: 0;
+            transform: scale(0.95);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes invitationAppear {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.08);
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .container {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .message {
+            font-size: 20px;
+        }
+
+        .final-message {
+            font-size: 22px;
+        }
+    }
+</style>
+<div class="container">
+
+    <!-- شاشة إدخال الاسم -->
 
     <div id="nameScreen">
 
-        <div class="ornament">
-            ✦
-        </div>
+        <div class="symbol">✦</div>
 
         <div class="small-title">
             SPECIAL INVITATION
@@ -17,63 +312,46 @@
             دعوة خاصة
         </h1>
 
-        <p class="subtitle">
-
+        <p class="intro">
             عندي دعوة ليك يا خويا ❤️
             <br>
             اكتب اسمك عشان تفتح دعوتك
-
         </p>
-
 
         <input
             type="text"
             id="nameInput"
             placeholder="اكتب اسمك هنا..."
-            autocomplete="off"
         >
 
-
-        <button onclick="showInvitation()">
-
+        <button onclick="openInvitation()">
             افتح دعوتك ✨
-
         </button>
 
     </div>
 
 
-
     <!-- الدعوة -->
 
-    <div id="message">
+    <div id="invitation">
 
-
-        <div class="ornament">
+        <div class="symbol">
             ✦
         </div>
-
 
         <div class="small-title">
             YOU ARE INVITED
         </div>
 
-
-        <div class="welcome">
-
+        <div class="guest">
             أخويا
-            <span class="name" id="userName"></span>
+            <span id="guestName"></span>
             ❤️
-
         </div>
 
+        <div class="line"></div>
 
-        <div class="divider">
-            <span>❖</span>
-        </div>
-
-
-        <div class="message-box">
+        <div class="message">
 
             حبيت أعزمك على فرح أخويا
 
@@ -95,13 +373,25 @@
 
             <br>
 
-            رأس البر
+            في رأس البر
 
         </div>
 
+        <div class="details">
 
-        <div class="final">
-هستناك يا خويا ❤️
+            📅 الجمعة 4 سبتمبر
+            <br>
+
+            📍 قاعة مارلي للقوات المسلحة
+            <br>
+
+            📍 رأس البر
+
+        </div>
+
+        <div class="final-message">
+
+            هستناك يا خويا ❤️
 
             <br>
 
@@ -109,86 +399,51 @@
 
         </div>
 
-
-        <div class="location">
-
-            ✦ مستنيك تنورني في فرح أخويا ✦
-
-        </div>
-
-
         <div class="footer">
-
             WITH LOVE ❤️
-
         </div>
-
 
     </div>
-
 
 </div>
 
 
-
 <script>
 
-    function showInvitation() {
+    function openInvitation() {
 
-        const input =
-            document.getElementById("nameInput");
+        const input = document.getElementById("nameInput");
 
-        const name =
-            input.value.trim();
-
+        const name = input.value.trim();
 
         if (name === "") {
 
+            alert("اكتب اسمك الأول ❤️");
+
             input.focus();
 
-            input.placeholder =
-                "اكتب اسمك الأول يا خويا ❤️";
-
             return;
-
         }
 
+        document.getElementById("guestName").textContent = name;
 
-        // إدخال الاسم في الدعوة
+        document.getElementById("nameScreen").style.display = "none";
 
-        document.getElementById("userName")
-            .textContent = name;
-
-
-        // إخفاء شاشة الاسم
-
-        document.getElementById("nameScreen")
-            .style.display = "none";
-
-
-        // إظهار الدعوة
-
-        document.getElementById("message")
-            .style.display = "block";
-
+        document.getElementById("invitation").style.display = "block";
     }
 
 
-    // Enter يفتح الدعوة
+    document.getElementById("nameInput").addEventListener(
+        "keydown",
+        function(event) {
 
-    document
-        .getElementById("nameInput")
-        .addEventListener(
-            "keypress",
-            function(event) {
+            if (event.key === "Enter") {
 
-                if (event.key === "Enter") {
-
-                    showInvitation();
-
-                }
+                openInvitation();
 
             }
-        );
+
+        }
+    );
 
 </script>
